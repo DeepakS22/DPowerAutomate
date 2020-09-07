@@ -1,0 +1,78 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "PowerBIAPI",
+    "description": "",
+    "version": "1.0"
+  },
+  "host": "api.powerbi.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v1.0/myorg/groups": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "GetGroups",
+        "description": "List of Workspace",
+        "operationId": "GetGroups",
+        "parameters": []
+      }
+    },
+    "/DELETE https://api.powerbi.com/v1.0/myorg/datasets/{datasetId}/tables/{tableName}/rows": {},
+    "/v1.0/myorg/datasets/cd0a66cd-72b3-495c-b6b1-c25391250e72/tables/RealTimeData/rows": {},
+    "/v1.0/myorg/datasets/{datasetId}/tables/{tableName}/rows": {
+      "delete": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "DeleteDataRows",
+        "description": "DeleteDataRows",
+        "operationId": "DeleteDataRows",
+        "parameters": [
+          {
+            "name": "datasetId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tableName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2_auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://api.ouraring.com/oauth/token",
+      "scopes": {}
+    }
+  },
+  "security": [
+    {
+      "oauth2_auth": []
+    }
+  ],
+  "tags": []
+}
